@@ -1,0 +1,3 @@
+[scripts]
+generate = "./gps-sdr-sim -b 8 -e brdc3540.14n -T 2020/05/13,18:00:00 -o gpstest.bin -l -27.444166,153.074662"
+start = "sudo hackrf_transfer -t gpstest.bin -f 1575420000 -s 2600000 -a 1 -x 47 -R"
