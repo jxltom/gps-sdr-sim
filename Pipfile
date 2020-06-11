@@ -1,3 +1,5 @@
 [scripts]
-generate = "./gps-sdr-sim -b 8 -e brdc3540.14n -T 2020/05/13,18:00:00 -o gpstest.bin -l -27.444166,153.074662"
+generate = "./gps-sdr-sim -b 8 -e brdc3540.14n -T 2020/05/13,18:00:00 -o gpstest.bin -g vendor/upload-route-test/upload-route-test.txt"
 start = "sudo hackrf_transfer -t gpstest.bin -f 1575420000 -s 2600000 -a 1 -x 47 -R"
+start-fast = "sudo hackrf_transfer -t gpstest-fast.bin -f 1575420000 -s 2600000 -a 1 -x 47 -R"
+start-circle = "sudo hackrf_transfer -t gpstest-circle.bin -f 1575420000 -s 2600000 -a 1 -x 47 -R"
